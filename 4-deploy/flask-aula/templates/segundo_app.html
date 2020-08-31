@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Segundo App</title>
+	</head>
+	<body>
+		<div>Ola, este é o meu segundo app em Flask</div>
+		<form action="{{ url_for('predict')}}" method="post">
+	        <input type="text" name="zona" placeholder="Zona" required="required" />
+	        <button type="submit">Calcular!</button>
+	        {{ prediction_text }}
+    	</form>
+	</body>
+</html>
