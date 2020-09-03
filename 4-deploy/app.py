@@ -25,7 +25,6 @@ def home():
 def predict():
     features = [x for x in request.form.values()]
     final_features = prepare_input(*features)
-    print(final_features)
     prediction = np.expm1(model.predict(final_features))
     output = round(prediction[0], 2)
 
